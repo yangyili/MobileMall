@@ -1,4 +1,4 @@
 module AdminManagement
-  class ApplicationController < ActionController::Base
+  class ApplicationController < AdminManagement.BaseControllerClass
   end
 end

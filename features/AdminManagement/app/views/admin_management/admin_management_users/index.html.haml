@@ -1,35 +1,28 @@
-<h1>Listing admin_management_users</h1>
+%h1 Listing admin_management_users
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th>Phone</th>
-      <th>Admin</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+%table
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th Password
+      %th Phone
+      %th Admin
+      %th
+      %th
+      %th
 
-  <tbody>
-    <% @admin_management_users.each do |admin_management_user| %>
-      <tr>
-        <td><%= admin_management_user.name %></td>
-        <td><%= admin_management_user.email %></td>
-        <td><%= admin_management_user.password %></td>
-        <td><%= admin_management_user.phone %></td>
-        <td><%= admin_management_user.admin %></td>
-        <td><%= link_to 'Show', admin_management_user %></td>
-        <td><%= link_to 'Edit', edit_admin_management_user_path(admin_management_user) %></td>
-        <td><%= link_to 'Destroy', admin_management_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  %tbody
+    -@admin_management_users.each do |admin_management_user|
+      %tr
+        %td= admin_management_user.name
+        %td= admin_management_user.email
+        %td= admin_management_user.password
+        %td= admin_management_user.phone
+        %td= admin_management_user.admin
+        %td= link_to 'Show', admin_management_user
+        %td= link_to 'Edit', edit_admin_management_user_path(admin_management_user)
+        %td= link_to 'Destroy', admin_management_user, method: :delete, data: { confirm: 'Are you sure?' }
+%br
 
-<br>
-
-<%= link_to 'New Admin management user', new_admin_management_user_path %>
+= link_to 'New Admin management user', new_admin_management_user_path

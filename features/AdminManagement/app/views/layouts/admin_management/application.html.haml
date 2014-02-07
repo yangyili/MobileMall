@@ -1,13 +1,11 @@
 !!!
 %html
-    %head
-        %title AdminManagement
-        = stylesheet_link_tag    "admin_management/application", media: "all"
-        = javascript_include_tag "admin_management/application"
-        = csrf_meta_tags
-    %body
-
-<%= yield %>
-
-</body>
-</html>
+  %head
+    %title AdminManagement
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #wrapper
+      .container
+        = yield

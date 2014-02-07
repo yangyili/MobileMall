@@ -16,6 +16,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="admin_management (v0.0.1, /home/joker/work/MobileMall/features/AdminManagement) [path][gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="customer_management (v0.0.1, /home/joker/work/MobileMall/features/CustomerManagement) [path][gem]" level="application" />
+  </component>
+  <component name="RModuleSettingsStorage">
+    <LOAD_PATH number="0" />
+    <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
   </component>
 </module>
 
