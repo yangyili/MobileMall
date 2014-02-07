@@ -1,4 +1,7 @@
 require "customer_management/engine"
 
-module CustomerManagement
+module CustomerManagementDependencies
+  mattr_accessor :BaseControllerClass
 end
+
+CustomerManagementDependencies.BaseControllerClass = Class.new(ActionController::Base)

@@ -1,14 +1,11 @@
 !!!
 %html
-<head>
-  <title>CustomerManagement</title>
-  <%= stylesheet_link_tag    "customer_management/application", media: "all" %>
-  <%= javascript_include_tag "customer_management/application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
+  %head
+    %title CustomerManagement
+    = stylesheet_link_tag    "customer_management/application", media: "all"
+    = javascript_include_tag "customer_management/application"
+    = csrf_meta_tags
+  %body
+    #wrapper
+      .container
+        = yield

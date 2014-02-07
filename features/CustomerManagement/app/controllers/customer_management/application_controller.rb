@@ -1,4 +1,10 @@
 module CustomerManagement
-  class ApplicationController < ActionController::Base
+  class ApplicationController < CustomerManagementDependencies.BaseControllerClass
+
+    def index
+
+    end
+
+
   end
 end
