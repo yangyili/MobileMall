@@ -1,4 +1,4 @@
-#AdminManagement.signin_redirect_path = '/admin_management/index'
+AdminManagement.signin_redirect_path = '/customer_management/index'
 AdminManagement.BaseControllerClass = Class.new(ActionController::Base) do
 
   layout 'application'

@@ -21,7 +21,5 @@ module AdminManagement
       user = find_all_by_admin false
       return user
     end
-
-
   end
 end

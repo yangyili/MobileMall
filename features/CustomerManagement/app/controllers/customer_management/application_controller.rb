@@ -1,10 +1,5 @@
 module CustomerManagement
   class ApplicationController < CustomerManagementDependencies.BaseControllerClass
-
-    def index
-
-    end
-
-
+    #before_filter :non_admin_authenticate
   end
 end
