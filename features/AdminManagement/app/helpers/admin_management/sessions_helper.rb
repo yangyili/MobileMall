@@ -28,7 +28,7 @@ module AdminManagement
     end
 
     def is_admin?
-      signed_in? && current_user.admin
+      signed_in? && current_user.admin == "admin"
     end
 
     def deny_access
@@ -36,14 +36,12 @@ module AdminManagement
     end
 
     def non_admin_authenticate
-      deny_access unless signed_in? && (not current_user.admin)
+      deny_access unless signed_in? && (not current_user.admin == "admin")
     end
 
     def admin_authenticate
       deny_access unless is_admin?
     end
-
-
 
   end
 end

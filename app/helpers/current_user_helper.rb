@@ -14,7 +14,7 @@ module CurrentUserHelper
   end
 
   def is_admin?
-    signed_in? && current_user.admin
+    signed_in? && current_user.admin=="admin"
   end
 
   def current_user_id
@@ -28,7 +28,7 @@ module CurrentUserHelper
   end
 
   def non_admin_authenticate
-    deny_access unless signed_in? && (not current_user.admin)
+    deny_access unless signed_in? && (not current_user.admin=="admin")
   end
 
   def admin_authenticate

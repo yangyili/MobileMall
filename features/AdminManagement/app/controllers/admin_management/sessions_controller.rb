@@ -27,11 +27,10 @@ module AdminManagement
     private
 
     def redirect_by_role user
-      if user.admin?
+      if user.admin=="admin"
         redirect_to admin_management_users_path
       else
         redirect_to AdminManagement.signin_redirect_path
-
       end
 
     end
