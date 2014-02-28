@@ -1,6 +1,6 @@
 require 'test_helper'
 
 module CustomerManagement
-  class ShowProductsHelperTest < ActionView::TestCase
+  class InformationHelperTest < ActionView::TestCase
   end
 end

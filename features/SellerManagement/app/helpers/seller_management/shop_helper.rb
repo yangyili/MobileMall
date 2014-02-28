@@ -1,4 +1,4 @@
 module SellerManagement
-  module MyShopHelper
+  module ShopHelper
   end
 end

@@ -1,6 +1,5 @@
 CustomerManagement::Engine.routes.draw do
-  resources :show_products
+  resources :information
 
-  get "index" ,to:"show_products#index"
-
+  get "index" ,to:"information#index"
 end

@@ -1,6 +1,6 @@
 SellerManagement::Engine.routes.draw do
-  resources :my_shop
+  resources :shop
 
-  get "index" ,to:"my_shop#index"
+  get "index" ,to:"shop#index"
 
 end

@@ -1,11 +1,8 @@
 require_dependency "customer_management/application_controller"
 
 module CustomerManagement
-  class ShowProductsController < ApplicationController
-
+  class InformationController < ApplicationController
     def index
-
-
 
     end
   end

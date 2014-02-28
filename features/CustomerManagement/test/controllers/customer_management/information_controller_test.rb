@@ -1,7 +1,7 @@
 require 'test_helper'
 
-module SellerManagement
-  class MyShopControllerTest < ActionController::TestCase
+module CustomerManagement
+  class InformationControllerTest < ActionController::TestCase
     # test "the truth" do
     #   assert true
     # end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
 module SellerManagement
-  class MyShopHelperTest < ActionView::TestCase
+  class ShopHelperTest < ActionView::TestCase
   end
 end

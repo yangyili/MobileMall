@@ -1,4 +1,4 @@
 module CustomerManagement
-  module ShowProductsHelper
+  module InformationHelper
   end
 end
