@@ -6,14 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-admin = AdminManagement::AdminManagementUser.find_by(admin:true)
+admin = AdminManagement::AdminManagementUser.find_by(admin:"admin")
 if admin.nil?
-  admin = AdminManagement::AdminManagementUser.new :name => "admin", :email => "admin@admin.com", :password => "admin", :phone => "18733171780" , :admin => true
+  admin = AdminManagement::AdminManagementUser.new :name => "admin", :email => "admin@admin.com", :password => "admin", :phone => "18733171780" , :admin => "admin"
   admin.save
 end
 
-user = AdminManagement::AdminManagementUser.find_by_name("dev")
-if user.nil?
-  user = AdminManagement::AdminManagementUser.new :name => "dev", :email => "dev@dev.com", :password => "dev" , :phone => "18733171781"
-  user.save
+seller = AdminManagement::AdminManagementUser.find_by(admin:"seller")
+if seller.nil?
+  seller = AdminManagement::AdminManagementUser.new :name => "seller", :email => "seller@seller.com", :password => "seller" , :phone => "18733171781", :admin => "seller"
+  seller.save
+end
+
+customer = AdminManagement::AdminManagementUser.find_by(admin:"customer")
+if customer.nil?
+  customer = AdminManagement::AdminManagementUser.new :name => "customer", :email => "customer@customer.com", :password => "customer" , :phone => "18733171782", :admin => "customer"
+  customer.save
 end

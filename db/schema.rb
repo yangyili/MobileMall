@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140227225815) do
     t.string   "email"
     t.string   "password"
     t.string   "phone"
-    t.boolean  "admin",      default: false
+    t.string   "admin",      default: "customer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
