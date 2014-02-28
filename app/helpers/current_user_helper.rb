@@ -17,11 +17,13 @@ module CurrentUserHelper
     signed_in? && current_user.admin=="admin"
   end
 
+  def is_seller?
+    signed_in? && current_user.admin == "seller"
+  end
+
   def current_user_id
     session[:user_id] || nil
   end
-
-
 
   def deny_access
     redirect_to '/', :notice => "Please sign in to access this page."

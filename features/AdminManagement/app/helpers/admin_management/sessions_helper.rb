@@ -31,6 +31,10 @@ module AdminManagement
       signed_in? && current_user.admin == "admin"
     end
 
+    def is_seller?
+      signed_in? && current_user.admin == "seller"
+    end
+
     def deny_access
       redirect_to '/signin', :notice => "Please sign in to access this page."
     end
