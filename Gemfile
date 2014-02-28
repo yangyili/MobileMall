@@ -63,3 +63,7 @@ gem 'protected_attributes'
 gem 'admin_management', :path => "./features/AdminManagement"
 
 gem 'customer_management', :path => "./features/CustomerManagement"
+
+gem 'seller_management', :path => "./features/SellerManagement"
+
+

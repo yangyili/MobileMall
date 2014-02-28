@@ -55,6 +55,7 @@ MobileMall::Application.routes.draw do
   #   end
 
   mount AdminManagement::Engine, :at => '/'
+  mount SellerManagement::Engine, :at => '/seller_management'
   mount CustomerManagement::Engine, :at => '/customer_management'
 
 end
