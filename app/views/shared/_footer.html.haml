@@ -1,4 +1,16 @@
-%footer.footer
-  %ul.breadcrumb
-    %li
-      %span.gray © 移动商城
+-if signed_in?
+  .ui-footer-fixed(data-role = "footer")
+    %div(data-role="navbar")
+      %ul
+        %li
+          %a(href="") 首页
+        -if is_admin?
+          %li
+            %a(href="")用户管理
+        -if is_seller?
+          %li
+            %a(href="")我的店铺
+        -if is_customer?
+          %li
+            %a(href="")个人中心
+-else
