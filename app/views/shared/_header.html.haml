@@ -1,34 +1,22 @@
--#.navbar.navbar-default.navbar-static-top
+.navbar.navbar-default.navbar-static-top
   .container
     .navbar-header
       %a.navbar-brand(href="/" ) 移动商城
     -if signed_in?
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
-          %a(href="#" )
+          %a(class="dropdown-toggle" data-toggle="dropdown" href="#")
             %span
-              你好，#{current_user.name}
+              你好，
+            %span= current_user.name
+            %b(class="caret")
+          %ul(class="dropdown-menu" )
+            %li
+              %a(href="/signout" ) 退出
     -else
       %ul.nav.navbar-nav.navbar-right
         %li
           %a(href="/signup")
-            %span
+            %span.glyphicon.glyphicon-star
               去注册
-%div(data-role = "header" data-position="fullscreen")
-  %div(data-role = "navbar")
-  .container
-    %a.navbar-brand(href="/" ) 移动商城
-    -if signed_in?
-      %ul.nav.navbar-nav.navbar-right
-        %li.dropdown
-          %a(href="#" )
-            %span
-              你好，#{current_user.name}
-    -else
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a(href="/signup")
-            %span
-              去注册
-
 %br

@@ -59,6 +59,7 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'protected_attributes'
 
+gem 'carrierwave'
 
 gem 'admin_management', :path => "./features/AdminManagement"
 
