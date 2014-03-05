@@ -5,7 +5,7 @@ class CreateAdminManagementAdminManagementUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :password
-      t.string :phone
+      t.integer :phone
       t.string :admin, :default => "customer"
 
       t.timestamps
