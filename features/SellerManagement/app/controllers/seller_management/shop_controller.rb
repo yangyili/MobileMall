@@ -14,5 +14,22 @@ module SellerManagement
       redirect_to :action=>"index"
     end
 
+    def edit_product
+      product = ProductInfo.find_by(id:params[:product][:id])
+      product.name = params[:product][:name]
+      product.price = params[:product][:price]
+      product.describe = params[:product][:describe]
+      product.save
+
+      redirect_to :action=>"index"
+    end
+
+    def delete_product
+      product = ProductInfo.find_by(id:params[:id])
+      product.delete
+
+      redirect_to :action => 'index'
+    end
+
   end
 end
