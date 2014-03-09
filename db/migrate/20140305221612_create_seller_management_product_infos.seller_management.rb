@@ -6,6 +6,8 @@ class CreateSellerManagementProductInfos < ActiveRecord::Migration
       t.string :category
       t.string :name
       t.integer :price
+      t.string :image
+      t.string :url
       t.string :describe
 
       t.timestamps

@@ -34,8 +34,9 @@ ActiveRecord::Schema.define(version: 20140305221612) do
 
   create_table "seller_management_everyday_recommends", force: true do |t|
     t.integer  "seller_id"
-    t.string   "recommend_image"
-    t.boolean  "is_display",      default: false
+    t.string   "image"
+    t.string   "url"
+    t.boolean  "is_display", default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -45,6 +46,8 @@ ActiveRecord::Schema.define(version: 20140305221612) do
     t.string   "category"
     t.string   "name"
     t.integer  "price"
+    t.string   "image"
+    t.string   "url"
     t.string   "describe"
     t.datetime "created_at"
     t.datetime "updated_at"

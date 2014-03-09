@@ -3,16 +3,25 @@
     .navbar-header
       %a.navbar-brand(href="/" ) 移动商城
     -if signed_in?
-      %ul.nav.navbar-nav.navbar-right
-        %li.dropdown
-          %a(class="dropdown-toggle" data-toggle="dropdown" href="#")
-            %span
-              你好，
-            %span= current_user.name
-            %b(class="caret")
-          %ul(class="dropdown-menu" )
-            %li
-              %a(href="/signout" ) 退出
+      .navbar-collapse.collapse
+        %ul(class="nav navbar-nav navbar-right" )
+          %li(class="dropdown" )
+            %a(class="dropdown-toggle" data-toggle="dropdown" href="#" )
+              %span
+                你好，#{current_user.name}
+              %b(class="caret")
+            %ul(class="dropdown-menu" )
+              -if is_customer?
+                %li
+                  %a(href="#" ) 成为卖家
+                %li.divider
+              -if is_seller?
+                %li
+                  %a(href="#" ) 申请推荐
+                %li.divider
+              %li
+                %a(href="/signout") 退出
+
     -else
       %ul.nav.navbar-nav.navbar-right
         %li

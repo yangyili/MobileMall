@@ -1,2 +1,29 @@
-%p
-  Seller 登录
+.container
+  .row
+    %a(href="" class="btn btn-default btn-default-alt"  data-toggle="modal" data-target="#add_new_product") 添加新产品
+
+    %p
+      %table.table.table-hover.table-striped
+        %tody
+          -@products.each do |product|
+            %tr
+              %td #{image_tag(product.url, :class=>"product_image_size")}
+              %td
+                %table
+                  %tr
+                    %td 类别：
+                    %td #{product.category}
+                  %tr
+                    %td 名称：
+                    %td #{product.name}
+                  %tr
+                    %td 价格：
+                    %td #{product.price}
+                  %tr
+                    %td 描述：
+                    %td #{product.describe}
+
+      =will_paginate @products , :previous_label => '上一页' , :next_label => '下一页', renderer: BootstrapPagination::Rails
+
+
+    =render "model"
