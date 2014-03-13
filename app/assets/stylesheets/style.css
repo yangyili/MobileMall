@@ -10,7 +10,7 @@
 
 .carousel-control {
     position: absolute;
-    top: 50%;
+    top: 70%;
     width: 30px;
     height: 30px;
     font-size: 40px;
@@ -30,9 +30,13 @@
 .carousel-inner>.item>img {
     width: 100%;
     text-align: center;
-    height: 60px;
+    height: 80px;
 }
 .container .row{
     padding: 0;
     width: 100%;
+}
+
+#myCarousel{
+    margin-left: 48px;
 }
