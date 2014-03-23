@@ -20,5 +20,9 @@ module SellerManagement
       find(recommend["id"]). update_attribute(:is_display, recommend["is_display"])
     end
 
+    def self.fetch_display_logos
+      where(is_display:true)
+    end
+
   end
 end

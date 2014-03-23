@@ -7,22 +7,31 @@
       = form_for "new_product",:url => {controller:'shop', action:'create_product'}, :html => {:multipart => true} do |f|
         %div(class="modal-body")
           %table.table.table-hover
-            %thead
-              %tr
-                %td(algin="center")类别
-                %td(algin="center")名称
-                %td(algin="center")价格
-                %td(algin="center")描述
             %tbody
               %tr
+                %td(algin="center")类别
                 %td
-                  =f.text_field :category, class:"form-control"
-                %td
-                  =f.text_field :name, class:"form-control"
-                %td
-                  =f.text_field :price, class:"form-control"
-                %td
-                  = f.text_field :describe, class:"form-control"
+                  =f.radio_button :category, "clothes"
+                  =f.label "服装"
+                  &nbsp&nbsp
+                  =f.radio_button :category, "shoes"
+                  =f.label "鞋子"
+                  &nbsp&nbsp
+                  =f.radio_button :category, "bags"
+                  =f.label "包包"
+                  &nbsp&nbsp
+                  =f.radio_button :category, "jewelry"
+                  =f.label "首饰"
+                  &nbsp&nbsp
+              %tr
+                %td(algin="center")名称
+                %td=f.text_field :name, class:"form-control"
+              %tr
+                %td(algin="center")价格
+                %td=f.text_field :price, class:"form-control"
+              %tr
+                %td(algin="center")描述
+                %td= f.text_field :describe, class:"form-control"
           %div
             = f.file_field :image
             = f.hidden_field :image_cache

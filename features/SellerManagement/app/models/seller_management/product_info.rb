@@ -16,5 +16,13 @@ module SellerManagement
       end
     end
 
+    def self.fetch_product_infos_by category
+      where(category:category)
+    end
+
+    def self.find_product_by id
+      find(id)
+    end
+
   end
 end
