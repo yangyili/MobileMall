@@ -1,19 +1,30 @@
 .container
   .row
-    %div
-      %tr
-        %td #{image_tag(@product.url, :class=>"product_image_size")}
-        %td
-          %table
-            %tr
-              %td 类别：
-              %td= fetch_product_category @product.category
-            %tr
-              %td 名称：
-              %td #{@product.name}
-            %tr
-              %td 价格：
-              %td #{@product.price}
-            %tr
-              %td 描述：
-              %td #{@product.describe}
+    = form_for "new_order",:url => {controller:'information', action:'create_order'}, :html => {:multipart => true} do |f|
+      %div
+        %tr
+          %td #{image_tag(@product.url, :class=>"product_image_size")}
+          %td
+            %table.table
+              %tr
+                %td 产品号:
+                %td= f.text_field :product_id, class:"form-control", value:"#{@product.id}", readonly: "readonly"
+              %tr
+                %td 类别：
+                %td= fetch_product_category @product.category
+              %tr
+                %td 名称：
+                %td #{@product.name}
+              %tr
+                %td 价格：
+                %td #{@product.price}
+              %tr
+                %td 描述：
+                %td #{@product.describe}
+              %tr
+                %td 购买数量：
+                %td= f.number_field :count, class:"form-control", min:"1"
+              %tr
+                %td= f.submit value:"生成订单", class:"btn btn-primary btn-lg"
+
+

@@ -1,0 +1,64 @@
+.container
+  .row
+    %table.table
+      %thead
+        %tr
+          %th 订单号
+          %th 商品类别
+          %th 商品名称
+          %th 商品价格
+          %th 购买数量
+          %th 订单状态
+          %th
+          %th
+
+      %tbody
+        -@customer_orders.each do |order|
+          %tr
+            %td= order.id
+            %td= fetch_product_category(fetch_product_info_by(order.product_id).category)
+            %td= fetch_product_info_by(order.product_id).name
+            %td= fetch_product_info_by(order.product_id).price
+            %td= order.count
+            %td= order.status
+            %td
+            %td
+              %a(href="" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#delete_order_#{order.product_id}")
+                %i.icon-remove
+                  删除订单
+
+              %div(class="modal fade" id="delete_order_#{order.product_id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+                %div(class="modal-dialog")
+                  %div(class="modal-content")
+                    %div(class="modal-header")
+                      %button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times
+                      %h4(class="modal-title" id="myModalLabel") 是否删除此次下单
+                    %div(class="modal-body")
+                      %table.table.table-hover
+                        %thead
+                          %tr
+                            %td(aligin="center")订单号
+                            %td(algin="center")商品类别
+                            %td(algin="center")商品名称
+                            %td(algin="center")商品价格
+                            %td(algin="center")购买数量
+                            %td(algin="center")订单状态
+
+
+                        %tbody
+                          %tr
+                            %td= order.id
+                            %td= fetch_product_category(fetch_product_info_by(order.product_id).category)
+                            %td= fetch_product_info_by(order.product_id).name
+                            %td= fetch_product_info_by(order.product_id).price
+                            %td= order.count
+                            %td= order.status
+
+                      %div(class="modal-footer" )
+                        =link_to "删除" , {:controller => "information", :action => "delete_order",:order_id=>"#{order.id}"},:method => :post , :class=>"btn btn-danger btn-lg"
+                        %input(type="button" class="btn btn-default btn-lg" data-dismiss="modal" value="取消" )
+
+
+
+
+

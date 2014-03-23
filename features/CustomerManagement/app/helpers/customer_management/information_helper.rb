@@ -14,5 +14,11 @@ module CustomerManagement
 
     end
 
+    def fetch_product_info_by product_id
+
+      SellerManagement::ProductInfo.find_product_by product_id
+
+    end
+
   end
 end
