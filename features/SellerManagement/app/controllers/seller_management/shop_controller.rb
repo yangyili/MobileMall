@@ -31,5 +31,17 @@ module SellerManagement
       redirect_to :action => 'index'
     end
 
+    def apply_recommend
+
+    @all_logos = EverydayRecommend.where(seller_id:current_user_id).paginate(:page => params[:page] || 1, :per_page => 10)
+
+    end
+
+    def create_shop_logo
+      EverydayRecommend.save_new_logo_to_database params[:shop_logo],current_user_id
+
+      redirect_to :action=>"apply_recommend"
+    end
+
   end
 end

@@ -1,7 +1,7 @@
 .navbar.navbar-default.navbar-static-top
   .navbar-header
     %a.navbar-brand(href="/" ) 移动商城
-  -#-if signed_in?
+  -if signed_in?
     .navbar-collapse.collapse
       %ul(class="nav navbar-nav navbar-right" )
         %li(class="dropdown" )
@@ -16,12 +16,15 @@
               %li.divider
             -if is_seller?
               %li
-                %a(href="#" ) 申请推荐
+                %a(href="/seller_management/apply_recommend" ) 申请推荐
               %li.divider
+            -if is_admin?
+              %li
+                %a(href="/everyday_recommend" ) 每日推荐
             %li
               %a(href="/signout") 退出
 
-  -#-else
+  -else
     %ul.nav.navbar-nav.navbar-right
       %li
         %a(href="/signup")

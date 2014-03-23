@@ -21,5 +21,9 @@ module AdminManagement
       user = find_all_by_admin false
       return user
     end
+
+    def self.fetch_user_name id
+      find(id).name
+    end
   end
 end

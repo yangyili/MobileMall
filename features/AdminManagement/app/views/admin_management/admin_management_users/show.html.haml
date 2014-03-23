@@ -1,0 +1,22 @@
+%p#notice
+  = notice
+
+%p
+  %strong Name:
+  = @admin_management_user.name
+%p
+  %strong Email:
+  = @admin_management_user.email
+%p
+  %strong Password:
+  = @admin_management_user.password
+%p
+  %strong Phone:
+  = @admin_management_user.phone
+%p
+  %strong Admin:
+  = @admin_management_user.admin
+
+= link_to '编辑', edit_admin_management_user_path(@admin_management_user)
+|
+= link_to '返回', admin_management_users_path
