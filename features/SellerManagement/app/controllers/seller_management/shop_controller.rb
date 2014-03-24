@@ -43,5 +43,18 @@ module SellerManagement
       redirect_to :action=>"apply_recommend"
     end
 
+    def fetch_seller_orders
+      @seller_orders=[]
+      all_products = ProductInfo.fetch_all_products_by current_user_id
+      all_products.each do |product|
+
+        @seller_orders.push({
+            product_info: product,
+            orders_info: CustomerManagement::Order.fetch_seller_orders_by(product.id)
+                           })
+      end
+      @seller_orders
+    end
+
   end
 end

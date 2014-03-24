@@ -7,3 +7,25 @@
     width:100% ;
     height:auto;
 }
+
+#clothes{
+    width: 100%;
+    height: 100px;
+    background-color: bisque;
+}
+#shoes{
+    width: 100%;
+    height: 100px;
+    background-color: royalblue;
+}
+#bags{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+}
+#jewelry{
+    width: 100%;
+    height: 100px;
+    background-color: #f0ad4e;
+}
+

@@ -11,7 +11,9 @@ SellerManagement::Engine.routes.draw do
 
   post "edit_product" , to:"shop#edit_product"
 
-  match "delete_product/:id" ,to:"shop#delete_product" , :via=>:post
+  match "delete_product/:id", to:"shop#delete_product" , :via=>:post
+
+  get "seller_orders", to:"shop#fetch_seller_orders"
 
 
 end

@@ -13,9 +13,15 @@
             %ul(class="dropdown-menu" )
               -if is_customer?
                 %li
+                  %a(href="/customer_management/customer_orders")我的订单
+                %li.divider
+                %li
                   %a(href="#" ) 成为卖家
                 %li.divider
               -if is_seller?
+                %li
+                  %a(href="/seller_management/seller_orders" ) 待处理订单
+                %li.divider
                 %li
                   %a(href="/seller_management/apply_recommend" ) 申请推荐
                 %li.divider

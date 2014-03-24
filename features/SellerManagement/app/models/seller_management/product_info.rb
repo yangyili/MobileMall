@@ -24,5 +24,9 @@ module SellerManagement
       find(id)
     end
 
+    def self.fetch_all_products_by user_id
+      where(seller_id:user_id)
+    end
+
   end
 end

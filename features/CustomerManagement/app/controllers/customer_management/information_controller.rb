@@ -40,5 +40,21 @@ module CustomerManagement
 
     end
 
+    def pay_for_order
+
+      Order.pay_for_order_by params['order_id']
+
+      redirect_to :action=>"fetch_customer_orders"
+
+    end
+
+    def confirm_receipt
+
+      Order.confirm_receipt_by params['order_id']
+
+      render text:"ok"
+
+    end
+
   end
 end

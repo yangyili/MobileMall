@@ -4,7 +4,7 @@ module CustomerManagement
 
     def self.create_new_order user_id, order
 
-      create(customer_id:user_id,product_id:order["product_id"],count:order["count"],status:"未完成")
+      create(customer_id:user_id,product_id:order["product_id"],count:order["count"],status:"未付款")
 
     end
 
@@ -14,9 +14,29 @@ module CustomerManagement
 
     end
 
+    def self.fetch_seller_orders_by product_id
+
+      where(product_id:product_id)
+
+    end
+
     def self.delete_order_by order_id
 
       delete(order_id)
+
+    end
+
+    def self.pay_for_order_by order_id
+
+      order = find(order_id)
+      order.update_attribute(:status, "已付款")
+
+    end
+
+    def self.confirm_receipt_by order_id
+
+      order = find(order_id)
+      order.update_attribute(:status, "已完成")
 
     end
 
