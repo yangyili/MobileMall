@@ -50,10 +50,24 @@ module SellerManagement
 
         @seller_orders.push({
             product_info: product,
-            orders_info: CustomerManagement::Order.fetch_seller_orders_by(product.id)
+            orders_info: CustomerManagement::Order.fetch_seller_orders_by(product.id).group_by{|order| order.status}
                            })
       end
       @seller_orders
+    end
+
+    def seller_order_detail
+
+      @products = CustomerManagement::Order.fetch_seller_orders_by(params[:product_id]).group_by{|order| order.status}
+
+    end
+
+    def confirm_send_product
+
+      CustomerManagement::Order.confirm_send_product_by params['order_id']
+
+      render text:"ok"
+
     end
 
   end

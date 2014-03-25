@@ -15,5 +15,9 @@ SellerManagement::Engine.routes.draw do
 
   get "seller_orders", to:"shop#fetch_seller_orders"
 
+  get "seller_order_detail/:product_id", to:"shop#seller_order_detail"
+
+  post "confirm_send_product", to:"shop#confirm_send_product"
+
 
 end

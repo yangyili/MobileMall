@@ -40,5 +40,12 @@ module CustomerManagement
 
     end
 
+    def self.confirm_send_product_by order_id
+
+      order = find(order_id)
+      order.update_attribute(:status, "已完成")
+
+    end
+
   end
 end

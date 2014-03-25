@@ -13,5 +13,10 @@ module SellerManagement
       return "未定义"
 
     end
+
+    def fetch_customer_name_by customer_id
+       AdminManagement::AdminManagementUser.fetch_user_name customer_id
+    end
+
   end
 end

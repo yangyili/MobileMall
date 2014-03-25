@@ -1,0 +1,38 @@
+.container
+  .row
+    %p
+      %table.table.table-hover.table-striped
+        %thead
+          %tr
+            %th 买家
+            %th 数量
+            %th 订单状态
+            %th
+            %th
+        %tbody
+          -if @products["未付款"].present?
+            -@products["未付款"].each do |order|
+              %tr
+                %td=fetch_customer_name_by(order.customer_id)
+                %td=order.count
+                %td=order.status
+                %td
+          -if @products["已付款"].present?
+            -@products["已付款"].each do |order|
+              %tr
+                %td=fetch_customer_name_by(order.customer_id)
+                %td=order.count
+                %td=order.status
+                %td
+                  %a(class="btn btn-xs btn-lg btn-primary" onclick="confirm_send_product(#{order.id})" )
+                    %i.icon-ambulance
+                    发货
+          -if @products["已完成"].present?
+            -@products["已完成"].each do |order|
+              %tr
+                %td=fetch_customer_name_by(order.customer_id)
+                %td=order.count
+                %td=order.status
+                %td
+
+
