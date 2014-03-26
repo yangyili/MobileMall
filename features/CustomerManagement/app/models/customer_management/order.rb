@@ -43,7 +43,7 @@ module CustomerManagement
     def self.confirm_send_product_by order_id
 
       order = find(order_id)
-      order.update_attribute(:status, "已完成")
+      order.update_attribute(:status, "已发货")
 
     end
 

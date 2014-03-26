@@ -9,17 +9,23 @@
               %td
                 %table.table.table-hover
                   %tr
-                    %td(aligin="center")类型:
-                    %td=order[:product_info].category
+                    %td(aligin="center")商品编号:
+                    %td=order[:product_info].id
                     %td(aligin="center")未付款:
                     %td=order[:orders_info]["未付款"].length if order[:orders_info]["未付款"].present?
                     %td= 0 if order[:orders_info]["未付款"].blank?
                   %tr
-                    %td(algin="center")名称:
-                    %td=order[:product_info].name
+                    %td(aligin="center")类型:
+                    %td=order[:product_info].category
                     %td(algin="center")已付款:
                     %td=order[:orders_info]["已付款"].length if order[:orders_info]["已付款"].present?
                     %td= 0 if order[:orders_info]["已付款"].blank?
+                  %tr
+                    %td(algin="center")名称:
+                    %td=order[:product_info].name
+                    %td(algin="center")已发货:
+                    %td=order[:orders_info]["已发货"].length if order[:orders_info]["已发货"].present?
+                    %td= 0 if order[:orders_info]["已发货"].blank?
                   %tr
                     %td(algin="center")价格:
                     %td=order[:product_info].price
