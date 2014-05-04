@@ -1,0 +1,446 @@
+.moode .brand {
+    background: url(/images/logo.png) no-repeat 0 0;
+    width: 128px;
+    height: 58px;
+    float: left;
+    margin-left: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.moode .brand-1 {
+    background: url(/images/logo-1.png) no-repeat 0 0;
+    width: 148px;
+    height: 58px;
+    float: left;
+    margin-left: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.moode .navbar-inverse .navbar-inner {
+    background-color: #3B3B3B;
+    background-image: none;
+    border-color: #3B3B3B;
+}
+.moode .navbar-inverse .nav .active > a,
+.moode .navbar-inverse .nav .active > a:hover,
+.moode .navbar-inverse .nav .active > a:focus {
+    background-color: #3B3B3B;
+}
+
+.moode .navbar .nav {
+    float: right;
+    padding-top: 25px;
+}
+.moode .navbar .nav > .active > a,
+.moode .navbar .nav > .active > a:hover,
+.moode .navbar .nav > .active > a:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.index-info {
+    padding-top: 78px;
+    background-color: #94C947;
+}
+
+.index-img {
+    background: url(/images/index_img.png) no-repeat 50% 0;
+    height: 586px;
+    width: 807px;
+    position: relative;
+}
+.index-img h1 {
+    color: #FFF;
+    font-family: "微软雅黑";
+    font-weight: normal;
+    text-align: center;
+    margin-top: 30px;
+}
+.index-img p {
+    color: #FFF;
+    text-align: center;
+    width: 700px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.index-marketing {
+    padding-top: 40px;
+}
+.marketing-title {
+    font-size: 18px;
+    font-family: "微软雅黑";
+}
+.marketing-hope {
+    background: url(/images/hope.png) no-repeat 0 0;
+    padding-left: 94px;
+}
+.marketing-hope .marketing-title {
+    color: #CBA34C;
+}
+.marketing-express {
+    background: url(/images/express.png) no-repeat 0 0;
+    padding-left: 94px;
+}
+.marketing-express .marketing-title {
+    color: #9DB851;
+}
+.marketing-work {
+    background: url(/images/work.png) no-repeat 0 0;
+    padding-left: 94px;
+}
+.marketing-work .marketing-title {
+    color: #6D9BBD;
+}
+.marketing-info {
+    color: #919191;
+}
+.marketing-info-line {
+    margin-top: 5px;
+    font-size: 12px;
+}
+.marketing-info-btn {
+    margin-top: 10px;
+}
+.marketing-info-btn a {
+    background-color: #94C947;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 12px;
+}
+
+.footer {
+    border-top: 1px solid #DDD;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.copyright {
+    color: #919191;
+}
+.weibo {
+    font-size: 12px;
+    background: url(/images/sina.png) no-repeat 0 50%;
+    padding-left: 25px;
+    line-height: 17px;
+    color: #919191;
+    display: block;
+}
+
+.green-banner {
+    background: url(/images/green_banner.png) repeat-x 0 0;
+    min-height: 200px;
+    margin-top: 78px;
+}
+
+.green-head {
+    background: url(/images/green_head.png) no-repeat 50% 0;
+    padding-top: 150px;
+}
+
+.content-wrap {
+    width: 790px;
+    *width: 960px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    padding: 55px 85px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.green-title {
+    font-size: 28px;
+    color: #84c237;
+    font-weight: bold;
+}
+
+.f16 {
+    font-size: 16px;
+}
+.fb {
+    font-weight: bold;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.author {
+    font-family: "宋体";
+    color: #222222;
+    text-align: right;
+}
+
+.author-info {
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #999;
+    background: url(/images/author_info.png) no-repeat 0 0;
+}
+
+
+
+
+
+.clearfix{overflow:auto;_height:1%}
+
+.qrcode_area{
+    margin:30px auto; 
+    height:300px; 
+    width:300px;
+}
+
+.qrcode_area-login{
+    margin:30px auto; 
+    height:200px; 
+    width:200px;
+}
+
+
+.signup_area{
+    margin:50px auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 68%; 
+    border-radius:5px;
+    background-color: rgba(0,0,0, .1);
+}
+
+.login_area{
+    margin:100px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 48%; 
+    border-radius:5px;
+    background-color: rgba(0,0,0, .1);
+}
+
+.login_area-email{
+    margin-right: 0px;
+    float: right;
+    height: 310px;
+}
+
+
+.login_area-qrcode{
+    margin-left: 0px;
+    float: left;
+}
+
+.login_area .login_val label{
+    width: 18%;
+}
+
+
+.login_heading{
+    margin-bottom: 30px;
+    text-align: center;
+    color:#f0fff0;
+
+}
+
+.login_val{
+    overflow: visible;
+    margin-bottom:10px; 
+}
+
+.login_val label{
+    float: left;
+    width: 26%;
+    padding: 5px 10px 0 0;
+    text-align: right;
+    font-size:17px;
+    color:#fff;
+    cursor:default;
+}
+
+.input_val{
+    position: relative;
+    float: left;
+    width: 250px;
+}
+
+.input_val input{
+    width: 214px;
+    padding: 4px 24px 4px 10px;
+}
+
+ 
+
+.must{
+    position:absolute;    
+    font-size: 20px;
+    color: #ec453f;
+    top: 10px;
+    right: -10px;
+}
+
+
+.ok{
+    display: inline-block;
+    position:absolute;
+    z-index:50;
+    background: url(/images/ok.png) no-repeat 0 0%;
+    padding-left: 20px;
+    height: 23px;
+    top: 6px;
+    right: 5px;
+}
+
+
+.warning{
+    display: inline-block;
+    position:absolute;
+    z-index:50;
+    background: url(/images/warning.png) no-repeat 0 0%;
+    padding-left: 20px;
+    height: 23px;
+    top: 0px;
+    right: 5px;
+}
+
+.warning_area{
+    display: inline-block;
+    position:absolute;
+    z-index:100;
+    background-color: #ec453f;
+    border-radius:2px;
+    color: #fff;
+    font-size: 13px;
+    padding:4px 6px 0 6px;
+    height: 23px;
+    top: -24px;
+    right: 5px;
+}
+
+.empty span:after{
+    content: " 必填";
+    position:absolute;
+    top: -4px;
+    right: -28px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.empty input{
+    border-color:#F66E5C;
+}
+
+
+input[type="text"].text_1:focus {
+    border: 1px solid red;
+}  
+
+
+input.btn-login{
+    padding:7px 0px; 
+    width: 248px;
+    font-size:18px;
+    text-align: center;
+    color:#FFF;
+    background-color: #f8503c;
+    border: 0;
+    border-radius:3px;
+}
+
+input.btn-login:hover{
+    background-color: #ec453f;
+}
+
+input.btn-login:focus{
+    outline: none;
+    background-color: #f8503c;
+}
+
+
+@media only screen and (max-width: 768px){
+
+
+    .container{
+        width: 95%;
+    }
+
+    .signup_area{
+        width: 98%;
+    }
+}
+
+.index-info-phone{
+    padding-top: 0px;
+
+}
+
+.heading-phone span{
+    float: left;    
+    width: 26%;
+}
+
+.heading-phone h3{
+    color:#f0fff0;
+    width: 250px;
+    margin-left: 26%;
+    padding-left: 10px;
+    text-align: center;
+}
+
+ a:hover{
+    display: none;
+}
+
+@media only screen and  (min-width: 480px) and (max-width: 640px) {
+    .container{
+        width: 95%;
+    }
+    .signup_area{
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .container{
+        width: 95%;
+    }
+    .signup_area{
+        width: 98%;
+    }
+
+    .heading-phone {
+        width: 100px;
+    }
+
+    .login_val label{
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .input_val{
+        width: 270px;
+    }
+
+    .input_val input{
+        margin-left: 20px;
+    }
+
+    .login_val label{
+        width: 18%;
+    }
+
+    .empty span:after{
+        opacity: .0;
+    }
+
+    input.btn-login{
+        margin-left: 20px;
+    }
+}

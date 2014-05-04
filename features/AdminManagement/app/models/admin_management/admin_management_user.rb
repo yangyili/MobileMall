@@ -25,5 +25,10 @@ module AdminManagement
     def self.fetch_user_name id
       find(id).name
     end
+
+    def self.confirm_can_use?(column,content)
+      where("#{column} = '#{content}'").blank?
+    end
+
   end
 end
