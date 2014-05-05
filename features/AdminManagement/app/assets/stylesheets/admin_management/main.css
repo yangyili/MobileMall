@@ -76,21 +76,18 @@
     font-family: "微软雅黑";
 }
 .marketing-hope {
-    background: url(/images/hope.png) no-repeat 0 0;
     padding-left: 94px;
 }
 .marketing-hope .marketing-title {
     color: #CBA34C;
 }
 .marketing-express {
-    background: url(/images/express.png) no-repeat 0 0;
     padding-left: 94px;
 }
 .marketing-express .marketing-title {
     color: #9DB851;
 }
 .marketing-work {
-    background: url(/images/work.png) no-repeat 0 0;
     padding-left: 94px;
 }
 .marketing-work .marketing-title {
@@ -125,7 +122,6 @@
 }
 .weibo {
     font-size: 12px;
-    background: url(/images/sina.png) no-repeat 0 50%;
     padding-left: 25px;
     line-height: 17px;
     color: #919191;
@@ -133,7 +129,6 @@
 }
 
 .green-banner {
-    background: url(/images/green_banner.png) repeat-x 0 0;
     min-height: 200px;
     margin-top: 78px;
 }
@@ -186,12 +181,7 @@
     padding-left: 40px;
     padding-right: 40px;
     color: #999;
-    background: url(/images/author_info.png) no-repeat 0 0;
 }
-
-
-
-
 
 .clearfix{overflow:auto;_height:1%}
 
