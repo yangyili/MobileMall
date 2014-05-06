@@ -1,5 +1,7 @@
-%h1 用户列表
-%br
+%h3
+  账户信息
+  .admin-title.pull-right.clearfix
+    = link_to '新建用户', new_admin_management_user_path
 
 %table.table
   %thead
@@ -26,4 +28,4 @@
         %td= link_to '删除', admin_management_user, method: :delete, data: { confirm: 'Are you sure?' }
 %br
 
-= link_to '新建用户', new_admin_management_user_path
+

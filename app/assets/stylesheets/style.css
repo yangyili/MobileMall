@@ -40,3 +40,31 @@
 #myCarousel{
     margin-left: 48px;
 }
+
+
+
+
+.admin-title{
+    margin-right: 5%;
+}
+
+.admin-title a{
+    font-size: 16px;
+
+}
+
+.admin-useredit{
+    margin-bottom: 10px;
+}
+
+.admin-useredit label{
+    float: left;
+    width: 17%;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.admin-statistics label{
+    width: 25%;
+}

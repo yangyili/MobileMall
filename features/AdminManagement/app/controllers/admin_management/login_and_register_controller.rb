@@ -6,6 +6,14 @@ module AdminManagement
 
     def index
 
+      return '/' if current_user.blank?
+
+      redirect_to '/admin_management_users' if current_user.admin == 'admin'
+
+      redirect_to '/seller_management/index' if current_user.admin == 'seller'
+
+      redirect_to '/customer_management/index' if current_user.admin == 'customer'
+
     end
 
     def about_us

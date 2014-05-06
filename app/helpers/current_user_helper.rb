@@ -57,4 +57,14 @@ module CurrentUserHelper
     deny_access unless is_customer?
   end
 
+
+  def logo_url
+    return '/' if current_user.blank?
+
+    return '/admin_management_users' if current_user.admin == 'admin'
+
+    return '/seller_management/index' if current_user.admin == 'seller'
+
+    return '/customer_management/index' if current_user.admin == 'customer'
+  end
 end

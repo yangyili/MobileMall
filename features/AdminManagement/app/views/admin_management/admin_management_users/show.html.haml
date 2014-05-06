@@ -1,22 +1,23 @@
 %p#notice
   = notice
 
-%p
-  %strong Name:
-  = @admin_management_user.name
-%p
-  %strong Email:
-  = @admin_management_user.email
-%p
-  %strong Password:
-  = @admin_management_user.password
-%p
-  %strong Phone:
-  = @admin_management_user.phone
-%p
-  %strong Admin:
-  = @admin_management_user.admin
-
-= link_to '编辑', edit_admin_management_user_path(@admin_management_user)
-|
-= link_to '返回', admin_management_users_path
+.row
+  %br
+  .col-sm-4
+    %h4 账户信息
+    %hr
+    .admin-useredit.clearfix
+      %label 姓名:
+      %span= @admin_management_user.name
+    .admin-useredit.clearfix
+      %label 邮箱:
+      %span= @admin_management_user.email
+    .admin-useredit.clearfix
+      %label 电话:
+      %span= @admin_management_user.phone
+    .admin-useredit.clearfix
+      %label 密码:
+      %span= @admin_management_user.password
+    .admin-useredit.clearfix
+      %label 权限:
+      %span= @admin_management_user.admin
