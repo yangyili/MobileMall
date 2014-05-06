@@ -395,6 +395,9 @@ input.btn-login:focus{
     .signup_area{
         width: 98%;
     }
+    .login_area{
+        width: 98%;
+    }
 }
 
 @media only screen and (max-width: 480px){
@@ -402,6 +405,10 @@ input.btn-login:focus{
         width: 95%;
     }
     .signup_area{
+        width: 98%;
+    }
+
+    .login_area{
         width: 98%;
     }
 
@@ -434,3 +441,4 @@ input.btn-login:focus{
         margin-left: 20px;
     }
 }
+
