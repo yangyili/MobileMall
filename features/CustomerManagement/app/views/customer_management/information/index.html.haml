@@ -10,28 +10,22 @@
     %a.carousel-control.right(href="#myCarousel" data-slide="next") ›
 
 
-    #category
-      %a(href="products_show?category=clothes")
-        #clothes
-          %strong
-            %i.glyphicon.glyphicon-flag
-            %span
-              服装
-      %a(href="products_show?category=shoes")
-        #shoes
-          %strong
-            %i.glyphicon.glyphicon-flag
-            %span
-              鞋子
-      %a(href="products_show?category=bags")
-        #bags
-          %strong
-            %i.glyphicon.glyphicon-flag
-            %span
-              包包
-      %a(href="products_show?category=jewelry")
-        #jewelry
-          %strong
-            %i.glyphicon.glyphicon-flag
-            %span
-              首饰
+
+
+
+
+
+  .region
+    .block
+      %h2
+        商品分类
+      .content
+        %ul.nav-ms#nav-ms
+          %li(data-alt="锟斤拷锟斤拷微锟斤拷")
+            %a.ms-sina(href="products_show?category=clothes" target="_blank")服装
+          %li(data-alt="锟斤拷讯微锟斤拷")
+            %a.ms-tq(href="products_show?category=shoes" target="_blank" title="锟斤拷讯微锟斤拷")鞋子
+          %li(data-alt="Facebook")
+            %a.ms-facebook(href="products_show?category=bags" target="_blank" titlte="Facebook")包包
+          %li(data-alt="Twitter")
+            %a.ms-twitter(href="products_show?category=jewelry" target="_blank" title="Twitter")首饰
