@@ -9,7 +9,6 @@
 }
 
 .region {
-    background-color: rgb(35, 35, 35);
     width: 100%;
     padding: 0 10px;
     margin: 50px auto;
@@ -38,7 +37,7 @@
     border-radius: 3px;
 }
 .block h2 {
-    width: 237px;
+    width: 85%;
     height: 35px;
     line-height: 35px;
     margin: 0 auto 10px -6px;
@@ -70,8 +69,8 @@
 .block h2::after {
     content:"";
     display: block;
-    border: 17px solid #292929;
-    border-color: transparent  #292929 transparent transparent;
+    border: 17px solid rgba(255, 255, 255, 1);
+    border-color: transparent  rgba(255, 255, 255, 0.48) transparent transparent;
     width: 0;
     height: 0;
     position: absolute;
@@ -120,19 +119,19 @@
 }
 
 #nav-ms .ms-sina {
-    background-color: rgba(249,13,20, .42);
+    background-color: rgba(249,13,20, .7);
     background-position: 0px 4px;
 }
 #nav-ms .ms-tq  {
-    background-color: rgba(11,142,185, .42);
+    background-color: rgba(11,142,185, .7);
     background-position: 2px -38px;
 }
 #nav-ms .ms-facebook  {
-    background-color: rgba(56,93,148, .42);
+    background-color: rgba(56,93,148, .7);
     background-position: -3px -171px;
 }
 #nav-ms .ms-twitter{
-    background-color: rgba(74,183,225, .42);
+    background-color: rgba(74,183,225, .7);
     background-position: 2px -83px;
 }
 
@@ -140,7 +139,7 @@
 #nav-ms li:hover a{
     text-decoration: none;
     color: #fff;
-    width: 230px;
+    width: 85%;
     background-color: #d91e76;
 }
 #nav-ms li:hover .ms-sina {
