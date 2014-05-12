@@ -1,0 +1,30 @@
+= form_for(@admin_management_user) do |f|
+  -if @admin_management_user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@admin_management_user.errors.count, "error")
+        prohibited this admin_management_user from being saved:
+
+      %ul
+        -@admin_management_user.errors.full_messages.each do |msg|
+          %li= msg
+
+  .pull-right
+    .actions
+      = f.submit :value=>"保存", :class=>"btn btn-primary btn-sm "
+  .row
+    .col-sm-4
+      %h4 账户信息
+      %hr
+      .field.admin-useredit.clearfix
+        = f.label :name, "姓名"
+        = f.text_field :name, :class=>'col-sm-7'
+      .field.admin-useredit.clearfix
+        = f.label :email, "邮箱"
+        = f.text_field :email, :class=>'col-sm-7'
+      .field.admin-useredit.clearfix
+        = f.label :phone, "电话"
+        = f.text_field :phone, :class=>'col-sm-7'
+      .field.admin-useredit.clearfix
+        = f.label :password, "密码"
+        = f.text_field :password, :class=>'col-sm-7'

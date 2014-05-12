@@ -1,0 +1,44 @@
+.index-info
+  .container.index-img
+    %form.signup_area
+      .login_heading
+        %h3 注册申请
+      .login_val.clearfix
+        %label 申请人
+        .input_val
+          %input#name(type="text")
+          %div
+          .warning_area(style="display:none")
+          %span.must *
+      .login_val.clearfix
+        %label 手机
+        .input_val
+          %input#phone(type="text")
+          %div
+          .warning_area(style="display:none")
+          %span.must *
+      .login_val.clearfix
+        %label 邮箱
+        .input_val
+          %input#email(type="text")
+          %div
+          .warning_area(style="display:none")
+          %span.must *
+      .login_val.clearfix
+        %label 密码
+        .input_val
+          %input#password(type="password")
+          %div.ok(style="display:none")
+          %span.must *
+      .login_val.clearfix
+        %label 确认密码
+        .input_val
+          %input#confirm_password(type="password")
+          %div
+          .warning_area(style="display:none")
+          %span.must *
+      .login_val.clearfix
+        %label
+        %input#regist_user.btn-login(type="button" value="注册")
+      .container
+      .index-marketing

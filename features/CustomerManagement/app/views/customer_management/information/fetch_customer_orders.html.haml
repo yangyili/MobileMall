@@ -1,0 +1,111 @@
+.container
+  .row
+    %table.table
+      %thead
+        %tr
+          %th 订单号
+          %th 商品类别
+          %th 商品名称
+          %th 够买数量
+          %th 总计金额
+          %th 订单状态
+          %th
+          %th
+
+      %tbody
+        -@customer_orders.each do |order|
+          %tr
+            %td= order.id
+            %td= fetch_product_category(fetch_product_info_by(order.product_id).category)
+            %td= fetch_product_info_by(order.product_id).name
+            %td= order.count
+            %td= fetch_product_info_by(order.product_id).price * (order.count || 0)
+            %td= order.status
+            -if order.status=="未付款"
+              %td
+                %a.btn.btn-xs.btn-primary.btn-lg(href = "" data-toggle="modal" data-target="#pay_for_order_#{order.id}")
+                  %i.icon-addfriend
+                  去付款
+              %td
+                %a(href="" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#delete_order_#{order.id}")
+                  %i.icon-remove
+                  删除订单
+
+
+
+                %div(class="modal fade" id="pay_for_order_#{order.id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+                  %div(class="modal-dialog")
+                    %div(class="modal-content")
+                      %div(class="modal-header")
+                        %button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times
+                        %h4(class="modal-title" id="myModalLabel") 确定为此次订单付款吗
+                      %div(class="modal-body")
+                        %table.table.table-hover
+                          %thead
+                            %tr
+                              %td(aligin="center")订单号
+                              %td(algin="center")商品类别
+                              %td(algin="center")商品名称
+                              %td(algin="center")购买数量
+                              %td(algin="center")总计金额
+                              %td(algin="center")订单状态
+
+
+                          %tbody
+                            %tr
+                              %td= order.id
+                              %td= fetch_product_category(fetch_product_info_by(order.product_id).category)
+                              %td= fetch_product_info_by(order.product_id).name
+                              %td= order.count
+                              %td= fetch_product_info_by(order.product_id).price * (order.count || 0)
+                              %td= order.status
+
+                        %div(class="modal-footer" )
+                          =link_to "确定" , {:controller => "information", :action => "pay_for_order",:order_id=>"#{order.id}"},:method => :post , :class=>"btn btn-primary btn-lg"
+                          %input(type="button" class="btn btn-default btn-lg" data-dismiss="modal" value="取消" )
+                %div(class="modal fade" id="delete_order_#{order.id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+                  %div(class="modal-dialog")
+                    %div(class="modal-content")
+                      %div(class="modal-header")
+                        %button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times
+                        %h4(class="modal-title" id="myModalLabel") 是否删除此次下单
+                      %div(class="modal-body")
+                        %table.table.table-hover
+                          %thead
+                            %tr
+                              %td(aligin="center")订单号
+                              %td(algin="center")商品类别
+                              %td(algin="center")商品名称
+                              %td(algin="center")购买数量
+                              %td(algin="center")总计金额
+                              %td(algin="center")订单状态
+
+
+                          %tbody
+                            %tr
+                              %td= order.id
+                              %td= fetch_product_category(fetch_product_info_by(order.product_id).category)
+                              %td= fetch_product_info_by(order.product_id).name
+                              %td= order.count
+                              %td= fetch_product_info_by(order.product_id).price * (order.count || 0)
+                              %td= order.status
+
+                        %div(class="modal-footer" )
+                          =link_to "删除" , {:controller => "information", :action => "delete_order",:order_id=>"#{order.id}"},:method => :post , :class=>"btn btn-danger btn-lg"
+                          %input(type="button" class="btn btn-default btn-lg" data-dismiss="modal" value="取消" )
+            -elsif order.status!="已完成"
+              %td
+                %a.btn.btn-xs.btn-primary.btn-lg(disabled="true")
+                  %i.icon-align-center
+                  已付款
+              %td
+                %a(class="btn btn-xs btn-lg btn-primary" onclick="confirm_receipt(#{order.id})" )
+                  %i.icon-ambulance
+                  确认收货
+
+            -else
+              %td
+              %td
+                %a.btn.btn-xs.btn-success.btn-lg(disabled="true")
+                  %i.icon-beer
+                  此次交易已完成

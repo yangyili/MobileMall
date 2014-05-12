@@ -21,5 +21,14 @@ module AdminManagement
       user = find_all_by_admin false
       return user
     end
+
+    def self.fetch_user_name id
+      find(id).name
+    end
+
+    def self.confirm_can_use?(column,content)
+      where("#{column} = '#{content}'").blank?
+    end
+
   end
 end

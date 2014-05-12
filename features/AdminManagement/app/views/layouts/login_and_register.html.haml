@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title MobileMall
+    = stylesheet_link_tag    'admin_management/login_and_register', :media => 'all'
+    = javascript_include_tag 'admin_management/login_and_register'
+    = csrf_meta_tags
+    %meta(name="viewport" content="width=device-width,initial-scale=1,user-scalable=0")
+  %body.moode(data-spy="scroll" data-target=".bs-docs-sidebar" huaban_screen_capture_injected="true")
+    -if request.path.slice(0..14) != '/register_phone'
+      =render 'login_and_register_shared/header'
+    = yield
+    -if request.path.slice(0..14) != '/register_phone'
+      =render 'login_and_register_shared/footer'

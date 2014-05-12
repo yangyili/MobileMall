@@ -8,9 +8,7 @@
             %li= msg
 
 
-    .auth-form-header
-      %label 注册
-    .auth-form-body
+    %div
       .field
         = f.label :name, "姓名"
         = f.text_field :name
@@ -23,5 +21,6 @@
       .field
         = f.label :password, "密码"
         = f.password_field :password, :value => @user.password
+      %br
       .actions
-        = f.submit 'Save'
+        = f.submit '注册'

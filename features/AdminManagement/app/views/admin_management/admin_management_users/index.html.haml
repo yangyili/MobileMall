@@ -1,13 +1,16 @@
-%h1 Listing admin_management_users
+%h3
+  账户信息
+  .admin-title.pull-right.clearfix
+    = link_to '新建用户', new_admin_management_user_path
 
-%table
+%table.table
   %thead
     %tr
-      %th Name
-      %th Email
-      %th Password
-      %th Phone
-      %th Admin
+      %th 姓名
+      %th 邮箱
+      %th 密码
+      %th 电话
+      %th 用户权限
       %th
       %th
       %th
@@ -20,9 +23,9 @@
         %td= admin_management_user.password
         %td= admin_management_user.phone
         %td= admin_management_user.admin
-        %td= link_to 'Show', admin_management_user
-        %td= link_to 'Edit', edit_admin_management_user_path(admin_management_user)
-        %td= link_to 'Destroy', admin_management_user, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to '详细信息', admin_management_user
+        %td= link_to '编辑', edit_admin_management_user_path(admin_management_user)
+        %td= link_to '删除', admin_management_user, method: :delete, data: { confirm: 'Are you sure?' }
 %br
 
-= link_to 'New Admin management user', new_admin_management_user_path
+

@@ -1,0 +1,28 @@
+.index-info
+  .container.index-img
+    %form.login_area
+      .login_heading
+        %h3 邮箱登录
+      %br
+      .login_val.clearfix
+        %label 邮箱
+        .input_val
+          %input#login_email(type="text")
+          %div
+          %span.warning_area(style="display:none")
+          .warning(style="display:none")
+
+      .login_val.clearfix
+        %label 密码
+        .input_val
+          %input#login_password(type="password")
+          %div
+          %span.warning_area(style="display:none")
+          .warning(style="display:none")
+
+      .login_val.clearfix
+        %label
+        %input#login_user.btn-login(type="button" value="登录")
+
+.container
+  .index-marketing

@@ -1,0 +1,14 @@
+%div
+  -@all_shop_logos.each do |shops|
+    %div
+      %span #{fetch_seller_name(shops[0])}
+
+    %div
+      -shops[1].each do |logo|
+        %td
+          %span #{image_tag(logo.url)}
+        %td
+          %input(class = "checkbox" id = "checkbox_#{logo.id}" value="#{logo.id}" type="checkbox" onclick = "select_the_checkbox(this)")
+
+%div
+  %a.btn.btn-default.btn-default-alt(href="javascript:{}" onclick="submit_everyday_recommend()" ) 提交

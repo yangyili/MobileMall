@@ -14,6 +14,12 @@ PATH
     customer_management (0.0.1)
       rails (~> 4.0.2)
 
+PATH
+  remote: ./features/SellerManagement
+  specs:
+    seller_management (0.0.1)
+      rails (~> 4.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,10 +48,15 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
-    atomic (1.1.14)
-    bootstrap-sass (3.1.0.2)
+    atomic (1.1.15)
+    bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
     builder (3.1.4)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -56,10 +67,10 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
-    factory_girl (4.3.0)
+    factory_girl (4.4.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.3.0)
-      factory_girl (~> 4.3.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     haml (3.1.8)
     haml-rails (0.5.3)
@@ -81,9 +92,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
-    multi_json (1.8.4)
+    multi_json (1.9.0)
     mysql2 (0.3.15)
-    polyglot (0.3.3)
+    polyglot (0.3.4)
     protected_attributes (1.0.5)
       activemodel (>= 4.0.1, < 5.0)
     rack (1.5.2)
@@ -105,10 +116,10 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
-    rspec-core (2.14.7)
+    rspec-core (2.14.8)
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.5)
+    rspec-mocks (2.14.6)
     rspec-rails (2.14.1)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -125,7 +136,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    sprockets (2.10.1)
+    sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -134,10 +145,10 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.8)
+    sqlite3 (1.3.9)
     thor (0.18.1)
-    thread_safe (0.1.3)
-      atomic
+    thread_safe (0.2.0)
+      atomic (>= 1.1.7, < 2)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -158,6 +169,7 @@ PLATFORMS
 DEPENDENCIES
   admin_management!
   bootstrap-sass
+  carrierwave
   coffee-rails (~> 4.0.0)
   customer_management!
   factory_girl_rails
@@ -170,6 +182,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
+  seller_management!
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)

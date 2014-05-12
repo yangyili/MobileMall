@@ -18,6 +18,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="admin_management (v0.0.1, /home/joker/work/MobileMall/features/AdminManagement) [path][gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="customer_management (v0.0.1, /home/joker/work/MobileMall/features/CustomerManagement) [path][gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="seller_management (v0.0.1, /home/joker/work/MobileMall/features/SellerManagement) [path][gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

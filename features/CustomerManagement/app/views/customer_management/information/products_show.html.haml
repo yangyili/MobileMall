@@ -1,0 +1,27 @@
+.container
+  .row
+    %p
+      %table.table.table-hover.table-striped
+        %tody
+          -@product_infos.each do |product|
+            %tr
+              %td #{image_tag(product.url, :class=>"product_image_size")}
+              %td
+                %table
+                  %tr
+                    %td 类别：
+                    %td= fetch_product_category product.category
+                  %tr
+                    %td 名称：
+                    %td #{product.name}
+                  %tr
+                    %td 价格：
+                    %td #{product.price}
+                  %tr
+                    %td 描述：
+                    %td #{product.describe}
+                  %tr
+                    %td
+                      %a(href="product_detail?product_id=#{product.id}" class="btn btn-xs btn-primary")
+                        商品详情
+

@@ -1,0 +1,18 @@
+%div
+  -@all_logos.each do |logo|
+    %span #{image_tag(logo.url)}
+
+
+
+%br
+
+= form_for "shop_logo",:url => {controller:'shop', action:'create_shop_logo'}, :html => {:multipart => true} do |f|
+  %div
+    = f.label "新建logo"
+    %br
+    = f.file_field :image
+    = f.hidden_field :image_cache
+    %br
+    = f.submit value:"提交logo"
+
+= will_paginate @all_logos ,:previous_label => '上一页' , :next_label => '下一页', renderer: BootstrapPagination::Rails

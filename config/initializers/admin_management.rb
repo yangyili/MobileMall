@@ -1,6 +1,9 @@
-AdminManagement.signin_redirect_path = '/customer_management/index'
-AdminManagement.BaseControllerClass = Class.new(ActionController::Base) do
+AdminManagement.customer_signin_redirect_path = '/customer_management/index'
+AdminManagement.seller_signin_redirect_path = '/seller_management/index'
 
+AdminManagement.BaseControllerClass = Class.new(ActionController::Base) do
+  include CurrentUserHelper
+  helper :CurrentUser
   layout 'application'
   before_action :init_assets
 

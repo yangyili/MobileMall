@@ -1,8 +1,33 @@
-%div(class="navbar navbar-default navbar-static-top")
+.navbar.navbar-default.navbar-static-top
   .container
     .navbar-header
-      %button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
-        %span(class="icon-bar" )
-        %span(class="icon-bar" )
-        %span(class="icon-bar" )
-      %a(class="navbar-brand cwx-logo" href="/" ) 移动商城
+      %a.navbar-brand(href="#{logo_url}" ) 移动商城
+    -if signed_in?
+      .navbar-collapse.collapse
+        %ul(class="nav navbar-nav navbar-right" )
+          %li(class="dropdown" )
+            %a(class="dropdown-toggle" data-toggle="dropdown" href="#" )
+              %span
+                你好，#{current_user.name}
+              %b(class="caret")
+            %ul(class="dropdown-menu" )
+              -if is_customer?
+                %li
+                  %a(href="/customer_management/customer_orders")我的订单
+                %li.divider
+                %li
+                  %a(href="#" ) 成为卖家
+                %li.divider
+              -if is_seller?
+                %li
+                  %a(href="/seller_management/seller_orders" ) 待处理订单
+                %li.divider
+                %li
+                  %a(href="/seller_management/apply_recommend" ) 申请推荐
+                %li.divider
+              -if is_admin?
+                %li
+                  %a(href="/everyday_recommend" ) 每日推荐
+                %li.divider
+              %li
+                %a(href="/logout") 退出
